@@ -18,7 +18,13 @@ https://github.com/luckyframework/carbon
 
 ## Usage
 
-Set your `MAILGUN_API_KEY` variable inside `.env`
+Set your `MAILGUN_API_KEY`, `MAILGUN_BASE_URI` and `MAILGUN_SEND_DOMAIN` variable inside `.env`
+
+```
+MAILGUN_API_KEY=key-XXXXXXXXXXXXXXXXXXXXXXXXXX
+MAILGUN_BASE_URI=api.mailgun.net
+MAILGUN_SEND_DOMAIN=sandboxXXXXXXXXXXXXXXXXXXXXX.mailgun.org
+```
 
 and update your `config/email.cr` file with:
 
