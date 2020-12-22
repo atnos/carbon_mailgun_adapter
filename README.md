@@ -32,7 +32,7 @@ and update your `config/email.cr` file with:
 require "carbon_mailgun_adapter"
 
 BaseEmail.configure do |settings|
-  if Lucky::Env.development?
+  if Lucky::Env.production?
     mailgun_key = mailgun_key_from_env
     mailgun_base_uri = mailgun_base_uri_from_env
     mailgun_send_domain = mailgun_send_domain_from_env
