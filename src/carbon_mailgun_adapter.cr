@@ -29,12 +29,14 @@ class Carbon::MailgunAdapter < Carbon::Adapter
 
     def params
       {
-        "to" => to_mailgun_address(email.to),
+        "to" =>  to_mailgun_address(email.to),
+        "cc" =>  to_mailgun_address(email.cc),
+        "bcc" => to_mailgun_address(email.bcc),
         "subject" => email.subject,
         "from" => from,
         "html" => email.html_body.to_s,
         "text" => email.text_body.to_s
-      }
+      }.reject{ |key, value| value.blank? }
     end
 
     private def to_mailgun_address(addresses : Array(Carbon::Address))
