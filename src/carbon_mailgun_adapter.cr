@@ -1,5 +1,6 @@
 require "http"
 require "json"
+require "carbon"
 
 class Carbon::MailgunAdapter < Carbon::Adapter
   private getter api_key : String

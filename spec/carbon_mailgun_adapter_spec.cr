@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe CarbonMailgunAdapter do
+describe Carbon::MailgunAdapter do
   # TODO: Write tests
 
   it "works" do
